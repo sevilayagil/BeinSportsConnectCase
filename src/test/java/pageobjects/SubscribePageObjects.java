@@ -9,10 +9,10 @@ import org.openqa.selenium.support.PageFactory;
 public class SubscribePageObjects {
     final WebDriver driver;
     public SubscribePageObjects(WebDriver driver) {
-       this.driver=driver;
+       this.driver= driver;
         PageFactory.initElements(driver,this);
     }
-    @FindBy(how= How.CLASS_NAME,using="subscribe")
+    @FindBy(how= How.NAME,using="Subscribe")
     public WebElement subscribebutton;
     @FindBy(how= How.CSS,using="div[class='subscription-package'] [data-index='2']")
     public WebElement onemontbutton;
@@ -50,5 +50,6 @@ public class SubscribePageObjects {
     public WebElement Card_Verification;
     @FindBy(how = How.NAME, using = "payment")
     public WebElement confirmpaymentbutton;
+
 
 }

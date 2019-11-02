@@ -1,9 +1,12 @@
 package scenarios.testcases;
 
+import com.google.common.eventbus.Subscribe;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import pageobjects.SubscribePageObjects;
 import scenarios.base.StepManager;
@@ -13,6 +16,7 @@ public class SubscribeStep extends StepManager {
     public SubscribeStep() {
         super("subscribe");
         subscribePage = PageFactory.initElements(this.driver, SubscribePageObjects.class);
+        set_timeOutValue(10);
     }
 
     @Given("^a web browser is at the BeinSportsConnect home page$")
@@ -35,6 +39,10 @@ public class SubscribeStep extends StepManager {
         getElement(subscribePage.Password).sendKeys("Sa5895"+randomGenerator.nextInt());
         elementClick(subscribePage.Checkbox);
         elementClick(subscribePage.createaccount);
+        WebElement iFrame = driver.findElement(By.className("captcha-container"));
+        driver.switchTo().frame(iFrame);
+        WebElement iFrame_checkbox = driver.findElement(By.className("recaptcha-checkbox-border"));
+        iFrame_checkbox.click();
         elementClick(subscribePage.formClose);
 
     }
