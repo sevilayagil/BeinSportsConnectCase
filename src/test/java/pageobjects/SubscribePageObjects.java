@@ -10,13 +10,13 @@ public class SubscribePageObjects {
     final WebDriver driver;
     public SubscribePageObjects(WebDriver driver) {
        this.driver= driver;
-        PageFactory.initElements(driver,this);
+       PageFactory.initElements(driver, this);
     }
     @FindBy(how= How.NAME,using="Subscribe")
     public WebElement subscribebutton;
-    @FindBy(how= How.CSS,using="div[class='subscription-package'] [data-index='2']")
+    @FindBy(how= How.CSS,using="body > div.layout-wide > div.container-onboarding.step1 > div:nth-child(4)")
     public WebElement onemontbutton;
-    @FindBy(how= How.XPATH,using="/*[@class='position-r]//*[data-btn-index='1']")
+    @FindBy(how= How.XPATH,using="(.//*[normalize-space(text()) and normalize-space(.)='฿99'])[3]/following::a[1]")
     public WebElement subscribebuttonfreetrail;
     @FindBy(how= How.NAME,using="FirstName")
     public WebElement FirstName;

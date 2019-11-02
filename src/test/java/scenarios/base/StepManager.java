@@ -54,7 +54,7 @@ public class StepManager {
         driver = new ChromeDriver(options);
         options.addArguments("incognito");
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         this.folderName = folderName;
         pattern = "dd-M-yyyy-hh-mm-ss";
         simpleDateFormat = new SimpleDateFormat(pattern);
