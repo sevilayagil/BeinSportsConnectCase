@@ -50,18 +50,14 @@ public class StepManager {
             System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         }
         ChromeOptions options = new ChromeOptions();
-
         options.addArguments("--disable-popup-blocking");
         driver = new ChromeDriver(options);
         options.addArguments("incognito");
         driver.manage().window().maximize();
-
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         this.folderName = folderName;
         pattern = "dd-M-yyyy-hh-mm-ss";
         simpleDateFormat = new SimpleDateFormat(pattern);
-
-
     }
 
     protected void getUrl() {
@@ -81,7 +77,6 @@ public class StepManager {
         try {
             WebDriverWait wait = new WebDriverWait(driver, timeOuts.length == 0 ? _baseTimeOutValue : timeOuts[0].value);
             wait.until(ExpectedConditions.visibilityOf(element));
-            /* reportStep(Status.PASS, description);*/
             return element;
         } catch (Exception ex) {
             System.out.println("find element method error" + ex.getMessage());
