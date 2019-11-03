@@ -20,7 +20,7 @@ public class SubscribeStep extends StepManager {
     public SubscribeStep() {
         super("subscribe");
         subscribePage = PageFactory.initElements(this.driver, SubscribePageObjects.class);
-        set_timeOutValue(60);
+        set_timeOutValue(30);
     }
 
     @Given("^a web browser is at the BeinSportsConnect home page$")
@@ -30,15 +30,15 @@ public class SubscribeStep extends StepManager {
 
     @When("^user clicks subscribe button and selects Monthly Pass with One Week Free Trial$")
     public void userClicksSubscribeButtonAndSelectsMonthlyPassWithOneWeekFreeTrial()  {
-        elementClick(subscribePage.subscribebutton);
-        elementClick(subscribePage.onemontbutton);
-        elementClick(subscribePage.subscribebuttonfreetrail);
+        elementClick(subscribePage.subscribebutton,TimeOut.HIGH);
+        elementClick(subscribePage.onemontbutton,TimeOut.MIDDLE);
+        elementClick(subscribePage.subscribebuttonfreetrail,TimeOut.LOW);
     }
 
     @And("^user fills user information detail and click create account button$")
     public void userFillsUserInformationDetailAndClickCreateAccountButton() {
-        getElement(subscribePage.FirstName).sendKeys("Sevilay"+randomGenerator.nextInt(10));
-        getElement(subscribePage.LastName).sendKeys("Test beinSports");
+        getElement(subscribePage.FirstName,TimeOut.LOW).sendKeys("Sevilay"+randomGenerator.nextInt(10));
+        getElement(subscribePage.LastName,TimeOut.LOW).sendKeys("Test beinSports");
         getElement(subscribePage.EmailOrPhone).sendKeys("sevilay"+randomGenerator.nextInt(100)+ "@gmail.com" );
         getElement(subscribePage.Password).sendKeys("Sa5895"+randomGenerator.nextInt());
         elementClick(subscribePage.Checkbox);
@@ -68,6 +68,6 @@ public class SubscribeStep extends StepManager {
 
     @Then("^user shows error popup$")
     public void userShowsErrorPopup() {
-        System.out.println ("popup gorundu");
+        driver.switchTo().alert().dismiss();
     }
 }

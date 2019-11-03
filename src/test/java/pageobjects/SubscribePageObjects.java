@@ -14,7 +14,7 @@ public class SubscribePageObjects {
     }
     @FindBy(how= How.NAME,using="Subscribe")
     public WebElement subscribebutton;
-    @FindBy(how= How.CSS,using="body > div.layout-wide > div.container-onboarding.step1 > div:nth-child(4)")
+    @FindBy(how= How.XPATH,using="body/div[6]/div[1]/div[2]")
     public WebElement onemontbutton;
     @FindBy(how= How.XPATH,using="(.//*[normalize-space(text()) and normalize-space(.)='฿99'])[3]/following::a[1]")
     public WebElement subscribebuttonfreetrail;

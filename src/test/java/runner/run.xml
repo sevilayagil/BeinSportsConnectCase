@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SubscribePageObjects">
+    <parameter name="url" value="https://connect-th.beinsports.com/en"/>
+    <parameter name="type" value="chrome"/>
+    <test name="sample test">
+        <classes>
+            <class name="scenarios.testcases.SubscribeStep"/>
+        </classes>
+    </test>
+</suite>

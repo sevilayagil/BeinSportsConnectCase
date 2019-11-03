@@ -2,17 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99c80335-bc40-4fbe-b12c-00151ad727f1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/runner/run.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pageobjects/SubscribePageObjects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageobjects/SubscribePageObjects.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/scenarios/base/StepManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/scenarios/base/StepManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/scenarios/testcases/SubscribeStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/scenarios/testcases/SubscribeStep.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/Subscribe.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Subscribe.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/cucumber-html-report/report.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber-html-report/report.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/cucumber-json-report/cucumber-json.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber-json-report/cucumber-json.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/BeinSportsConnect.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/Subscribe.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Subscribe.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/chromedriver" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/chromedriver" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/pageobjects/SubscribePageObjects.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pageobjects/SubscribePageObjects.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/scenarios/base/StepManager$TimeOut.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/scenarios/base/StepManager$TimeOut.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/scenarios/base/StepManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/scenarios/base/StepManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/scenarios/testcases/SubscribeStep.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/scenarios/testcases/SubscribeStep.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,22 +42,22 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/resources" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test/resources" />
-      <recent name="$PROJECT_DIR$/src/test" />
+      <recent name="$PROJECT_DIR$/src/test/java/resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="runner" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test/resources" />
-      <recent name="$PROJECT_DIR$/src/test/java/resources" />
+      <recent name="$PROJECT_DIR$/src/test" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -72,15 +72,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestRunner">
-    <configuration name="All in BeinSportsConnect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BeinSportsConnect" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="TestRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BeinSportsConnect" />
       <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
@@ -96,7 +88,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.TestRunner" />
-        <item itemvalue="JUnit.All in BeinSportsConnect" />
       </list>
     </recent_temporary>
   </component>
