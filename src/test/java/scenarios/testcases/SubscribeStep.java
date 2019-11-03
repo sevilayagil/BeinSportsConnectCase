@@ -30,9 +30,9 @@ public class SubscribeStep extends StepManager {
 
     @When("^user clicks subscribe button and selects Monthly Pass with One Week Free Trial$")
     public void userClicksSubscribeButtonAndSelectsMonthlyPassWithOneWeekFreeTrial()  {
-        elementClick(subscribePage.subscribebutton,TimeOut.HIGH);
-        elementClick(subscribePage.onemontbutton,TimeOut.MIDDLE);
-        elementClick(subscribePage.subscribebuttonfreetrail,TimeOut.LOW);
+        elementClick(subscribePage.SubscribeButton,TimeOut.HIGH);
+        elementClick(subscribePage.OnemonthButton,TimeOut.MIDDLE);
+        elementClick(subscribePage.SubscribeButtonFreeTrail,TimeOut.LOW);
     }
 
     @And("^user fills user information detail and click create account button$")
@@ -42,28 +42,27 @@ public class SubscribeStep extends StepManager {
         getElement(subscribePage.EmailOrPhone).sendKeys("sevilay"+randomGenerator.nextInt(100)+ "@gmail.com" );
         getElement(subscribePage.Password).sendKeys("Sa5895"+randomGenerator.nextInt());
         elementClick(subscribePage.Checkbox);
-        elementClick(subscribePage.createaccount);
+        elementClick(subscribePage.CreateAccount);
         WebElement iFrame = driver.findElement(By.className("captcha-container"));
         driver.switchTo().frame(iFrame);
         WebElement iFrame_checkbox = driver.findElement(By.className("recaptcha-checkbox-border"));
         iFrame_checkbox.click();
-        elementClick(subscribePage.formClose);
+        elementClick(subscribePage.FormClose);
 
     }
 
     @And("^user fills card detail and clicks confirm payment method$")
     public void userFillsCardDetailAndClicksConfirmPaymentMethod() {
         elementClick(subscribePage.Checkbox);
-        elementClick(subscribePage.paynow);
-        getElement(subscribePage.Card_Name).sendKeys("Sevilay Test");
-        getElement(subscribePage.Card_Number).sendKeys("12023392323828");
-        elementClick(subscribePage.Card_ExpDate_Month);
-        elementClick(subscribePage.selectmonth);
-        elementClick(subscribePage.Card_ExpDate_Year);
-        elementClick(subscribePage.selectyear);
-        getElement(subscribePage.Card_Verification).sendKeys("120");
-        elementClick(subscribePage.confirmpaymentbutton);
-
+        elementClick(subscribePage.PayNow);
+        getElement(subscribePage.CardName).sendKeys("Sevilay Test");
+        getElement(subscribePage.CardNumber).sendKeys("12023392323828");
+        elementClick(subscribePage.CardExpDateMonth);
+        elementClick(subscribePage.SelectMonth);
+        elementClick(subscribePage.CardExpDateYear);
+        elementClick(subscribePage.SelectYear);
+        getElement(subscribePage.CardVerification).sendKeys("120");
+        elementClick(subscribePage.ConFirmPaymentButton);
     }
 
     @Then("^user shows error popup$")

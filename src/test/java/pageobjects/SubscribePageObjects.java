@@ -7,17 +7,16 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 public class SubscribePageObjects {
-    final WebDriver driver;
+
     public SubscribePageObjects(WebDriver driver) {
-       this.driver= driver;
        PageFactory.initElements(driver, this);
     }
     @FindBy(how= How.NAME,using="Subscribe")
-    public WebElement subscribebutton;
-    @FindBy(how= How.XPATH,using="body/div[6]/div[1]/div[2]")
-    public WebElement onemontbutton;
-    @FindBy(how= How.XPATH,using="(.//*[normalize-space(text()) and normalize-space(.)='฿99'])[3]/following::a[1]")
-    public WebElement subscribebuttonfreetrail;
+    public WebElement SubscribeButton;
+    @FindBy(how= How.CSS,using=".subscription-package:nth-child(4)")
+    public WebElement OnemonthButton;
+    @FindBy(how= How.CSS,using=".position-r:nth-child(4) > .btn-type-2")
+    public WebElement SubscribeButtonFreeTrail;
     @FindBy(how= How.NAME,using="FirstName")
     public WebElement FirstName;
     @FindBy(how= How.NAME,using="LastName")
@@ -29,27 +28,25 @@ public class SubscribePageObjects {
     @FindBy(how = How.CLASS_NAME, using = "custom-checkbox")
     public WebElement Checkbox;
     @FindBy(how = How.NAME, using = "bc-subscribe")
-    public WebElement createaccount;
+    public WebElement CreateAccount;
     @FindBy(how = How.CLASS_NAME, using = "form-close")
-    public WebElement formClose;
+    public WebElement FormClose;
     @FindBy(how = How.NAME, using = "pay-now")
-    public WebElement paynow;
+    public WebElement PayNow;
     @FindBy(how = How.NAME, using = "Ecom_Payment_Card_Name")
-    public WebElement  Card_Name;
+    public WebElement  CardName;
     @FindBy(how = How.NAME, using = "Ecom_Payment_Card_Number\n")
-    public WebElement Card_Number;
+    public WebElement CardNumber;
     @FindBy(how = How.NAME, using = "Ecom_Payment_Card_ExpDate_Month")
-    public WebElement Card_ExpDate_Month;
+    public WebElement CardExpDateMonth;
     @FindBy(how = How.CSS, using = "#Ecom_Payment_Card_ExpDate_Month > option:nth-child(3)")
-    public WebElement selectmonth;
+    public WebElement SelectMonth;
     @FindBy(how = How.ID, using = "Ecom_Payment_Card_ExpDate_Year")
-    public WebElement Card_ExpDate_Year;
+    public WebElement CardExpDateYear;
     @FindBy(how = How.CSS, using = "#Ecom_Payment_Card_ExpDate_Year > option:nth-child(2)")
-    public WebElement selectyear;
+    public WebElement SelectYear;
     @FindBy(how = How.ID, using = "Ecom_Payment_Card_Verification")
-    public WebElement Card_Verification;
+    public WebElement CardVerification;
     @FindBy(how = How.NAME, using = "payment")
-    public WebElement confirmpaymentbutton;
-
-
+    public WebElement ConFirmPaymentButton;
 }
