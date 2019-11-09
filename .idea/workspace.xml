@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99c80335-bc40-4fbe-b12c-00151ad727f1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pageobjects/SubscribePageObjects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageobjects/SubscribePageObjects.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/scenarios/base/StepManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/scenarios/base/StepManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/scenarios/testcases/SubscribeStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/scenarios/testcases/SubscribeStep.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/cucumber-html-report/report.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber-html-report/report.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/cucumber-json-report/cucumber-json.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber-json-report/cucumber-json.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/pageobjects/SubscribePageObjects.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pageobjects/SubscribePageObjects.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/scenarios/base/StepManager$TimeOut.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/scenarios/base/StepManager$TimeOut.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/scenarios/base/StepManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/scenarios/base/StepManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/scenarios/testcases/SubscribeStep.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/scenarios/testcases/SubscribeStep.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,7 +43,7 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -112,5 +114,21 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/scenarios/base/StepManager.java</url>
+          <line>125</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/scenarios/base/StepManager.java</url>
+          <line>124</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
