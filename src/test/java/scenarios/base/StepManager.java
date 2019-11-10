@@ -22,7 +22,6 @@ public class StepManager {
   protected void set_timeOutValue(int timeOutValue) {
     this._baseTimeOutValue = timeOutValue;
   }
-
   private int _baseTimeOutValue = 0;
   private String folderName = "";
   String pattern;
@@ -99,18 +98,18 @@ public class StepManager {
     }
   }
 
-    protected WebElement elementVisible(WebElement element, TimeOut... timeOuts) {
-        try {
-            WebDriverWait wait =
-                    new WebDriverWait(driver, timeOuts.length == 0 ? _baseTimeOutValue : timeOuts[0].value);
-            wait.until(ExpectedConditions.visibilityOf(element));
-            return element;
-        } catch (Exception ex) {
-            System.out.println("find element method error" + ex.getMessage());
-            takeScreenshot();
-            return null;
-        }
+  protected WebElement elementVisible(WebElement element, TimeOut... timeOuts) {
+    try {
+      WebDriverWait wait =
+          new WebDriverWait(driver, timeOuts.length == 0 ? _baseTimeOutValue : timeOuts[0].value);
+      wait.until(ExpectedConditions.visibilityOf(element));
+      return element;
+    } catch (Exception ex) {
+      System.out.println("find element method error" + ex.getMessage());
+      takeScreenshot();
+      return null;
     }
+  }
 
   public void PageScrolldown() {
     JavascriptExecutor jse = (JavascriptExecutor) driver;
@@ -141,7 +140,7 @@ public class StepManager {
     MIDDLE(10),
     HIGH(15),
     CUSTOM_MAX(60),
-      MAX_MAX(6000000);
+    MAX_MAX(6000000);
     private final int value;
 
     public int getValue() {

@@ -42,15 +42,14 @@ public class SubscribeStep extends StepManager {
   }
 
   @And("^user fills user information detail and click create account button$")
-  public void userFillsUserInformationDetailAndClickCreateAccountButton()
-      throws InterruptedException {
+  public void userFillsUserInformationDetailAndClickCreateAccountButton() {
     waitElemntCssControl(subscribePage.ImageLoading, "display", "none");
     System.out.println(subscribePage.ImageLoading.getCssValue("display"));
     elementinvisible(subscribePage.ImageLoading, TimeOut.MAX_MAX);
     elementVisible(subscribePage.ImageLoading);
     elementinvisible(subscribePage.ImageLoading, TimeOut.MAX_MAX);
     getElement(subscribePage.ExternalLoginButton).isDisplayed();
-    getElement(subscribePage.FirstName).sendKeys("sevilayasasdd" + randomGenerator.nextInt(1000));
+    getElement(subscribePage.FirstName).sendKeys("sevilayDeneme" + randomGenerator.nextInt(1000));
     getElement(subscribePage.LastName).sendKeys("Test beinSports");
     getElement(subscribePage.EmailOrPhone)
         .sendKeys("sevilayasddf" + randomGenerator.nextInt(100) + "@gmail.com");
@@ -73,8 +72,7 @@ public class SubscribeStep extends StepManager {
   }
 
   @And("^user fills card detail and clicks confirm payment method$")
-  public void userFillsCardDetailAndClicksConfirmPaymentMethod() throws InterruptedException {
-
+  public void userFillsCardDetailAndClicksConfirmPaymentMethod() {
     elementVisible(subscribePage.ImageLoading);
     elementinvisible(subscribePage.ImageLoading, TimeOut.MAX_MAX);
     waitElemntCssControl(subscribePage.ImageLoading, "display", "none");
