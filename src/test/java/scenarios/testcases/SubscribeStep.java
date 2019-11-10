@@ -50,19 +50,14 @@ public class SubscribeStep extends StepManager {
     elementVisible(subscribePage.ImageLoading);
     elementinvisible(subscribePage.ImageLoading, TimeOut.MAX_MAX);
     getElement(subscribePage.ExternalLoginButton).isDisplayed();
-    getElement(subscribePage.FirstName).sendKeys("sevilay" + randomGenerator.nextInt(10));
+    getElement(subscribePage.FirstName).sendKeys("sevilayasasdd" + randomGenerator.nextInt(1000));
     getElement(subscribePage.LastName).sendKeys("Test beinSports");
     getElement(subscribePage.EmailOrPhone)
-        .sendKeys("sevilay" + randomGenerator.nextInt(100) + "@gmail.com");
+        .sendKeys("sevilayasddf" + randomGenerator.nextInt(100) + "@gmail.com");
     getElement(subscribePage.Password).sendKeys("Sa5895" + randomGenerator.nextInt(10));
     customCheckboxGenerateWebDriver();
-
-    //        WebElement iFrame = driver.findElement(By.className("captcha-container"));
-    //        driver.switchTo().frame(iFrame);
-    //        WebElement iFrame_checkbox =
-    // driver.findElement(By.className("recaptcha-checkbox-border"));
-    //        iFrame_checkbox.click();
-    //        elementClick(subscribePage.FormClose);
+    elementClick(subscribePage.CreateAccount);
+    elementClick(subscribePage.FormClose);
   }
 
   private void customCheckboxGenerateWebDriver() {
@@ -71,9 +66,21 @@ public class SubscribeStep extends StepManager {
     element.click();
   }
 
+  private void customCheckboxTermsGenerateWebDriver() {
+    WebElement element =
+        driver.findElement(By.xpath("//*[@id=\"form-basket\"]/div[1]/div[4]/div[1]/label[1]"));
+    element.click();
+  }
+
   @And("^user fills card detail and clicks confirm payment method$")
-  public void userFillsCardDetailAndClicksConfirmPaymentMethod() {
-    elementClick(subscribePage.Checkbox);
+  public void userFillsCardDetailAndClicksConfirmPaymentMethod() throws InterruptedException {
+
+    elementVisible(subscribePage.ImageLoading);
+    elementinvisible(subscribePage.ImageLoading, TimeOut.MAX_MAX);
+    waitElemntCssControl(subscribePage.ImageLoading, "display", "none");
+    System.out.println(subscribePage.ImageLoading.getCssValue("display"));
+    getElement(subscribePage.PaymentMethodBox).isDisplayed();
+    customCheckboxTermsGenerateWebDriver();
     elementClick(subscribePage.PayNow);
     getElement(subscribePage.CardName).sendKeys("Sevilay Test");
     getElement(subscribePage.CardNumber).sendKeys("12023392323828");
@@ -87,6 +94,6 @@ public class SubscribeStep extends StepManager {
 
   @Then("^user shows error popup$")
   public void userShowsErrorPopup() {
-    driver.switchTo().alert().dismiss();
+    driver.switchTo().alert().accept();
   }
 }

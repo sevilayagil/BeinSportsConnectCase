@@ -55,7 +55,7 @@ public class SubscribePageObjects {
   @FindBy(how = How.NAME, using = "Ecom_Payment_Card_Name")
   public WebElement CardName;
 
-  @FindBy(how = How.NAME, using = "Ecom_Payment_Card_Number\n")
+  @FindBy(how = How.NAME, using = "Ecom_Payment_Card_Number")
   public WebElement CardNumber;
 
   @FindBy(how = How.NAME, using = "Ecom_Payment_Card_ExpDate_Month")
@@ -75,4 +75,7 @@ public class SubscribePageObjects {
 
   @FindBy(how = How.NAME, using = "payment")
   public WebElement ConFirmPaymentButton;
+
+  @FindBy(how = How.CLASS_NAME, using = "subscription-package")
+  public WebElement PaymentMethodBox;
 }
